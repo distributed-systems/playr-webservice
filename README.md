@@ -15,7 +15,7 @@ test JSON scenarios online
 
 ### Wesbite
 
-(http://playr.127.0.0.1.xip.io:8000/)[http://playr.127.0.0.1.xip.io:8000/]
+http://playr.127.0.0.1.xip.io:8000/
 
 
 ### API

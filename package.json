@@ -1,7 +1,7 @@
 {
       "name"                                : "playr-webservice"
     , "description"                         : "test JSON scenarios online"
-    , "version"                             : "0.1.1"
+    , "version"                             : "0.1.2"
     , "homepage"                            : "https://github.com/eventEmitter/playr-webservice"
     , "author"                              : "Michael van der Weg <michael@joinbox.com> (http://joinbox.com/)"
     , "license"                             : "MIT"

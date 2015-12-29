@@ -27,3 +27,12 @@ Your request should contain the following form data fields:
 - url: the base url you want the requests to be sent to (overrides the hostname & port part of your scenario script)
 - scenario: JSON encoded scenario
 
+
+The API returns an array with error messages. IF there are 0 messages everthing was ok!
+
+    {
+        "messages": [
+            "<span class=\"error-cyan\">HTTP Header content-length</span>: Expected value 64130 to be &lt; 200",
+            "<span class=\"error-cyan\">data.length</span>: Expected value 60 to be &gt; 5000000"
+        ]
+    }

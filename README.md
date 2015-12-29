@@ -28,7 +28,7 @@ Your request should contain the following form data fields:
 - scenario: JSON encoded scenario
 
 
-The API returns an array with error messages. IF there are 0 messages everthing was ok!
+The API returns an array with error messages. If there are 0 messages everthing was ok!
 
     {
         "messages": [
@@ -36,3 +36,19 @@ The API returns an array with error messages. IF there are 0 messages everthing 
             "<span class=\"error-cyan\">data.length</span>: Expected value 60 to be &gt; 5000000"
         ]
     }
+
+
+CSS Classes that may be used by the error messages:
+
+- error-white
+- error-grey
+- error-blue
+- error-cyan
+- error-green
+- error-magenta
+- error-red
+  error-yellow
+- error-bold
+- error-italic
+- error-underline
+- error-inverse

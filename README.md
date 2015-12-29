@@ -47,7 +47,7 @@ CSS Classes that may be used by the error messages:
 - error-green
 - error-magenta
 - error-red
-  error-yellow
+- error-yellow
 - error-bold
 - error-italic
 - error-underline

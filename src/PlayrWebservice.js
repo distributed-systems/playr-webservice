@@ -121,6 +121,8 @@
             let playbook = new Playr();
             let messages = [];
 
+            console.log('Staring new playbook ...'.white.bold);
+
             playbook.run(new JSONScenario({
                   data: scenario
                 , url: url
@@ -139,7 +141,7 @@
 
 
             playbook.play().then(() => {
-                log.success('playbook finished ...');
+                console.log('Playbook finished ...'.green.bold);
 
                 messages = messages.map((msg) => {
 

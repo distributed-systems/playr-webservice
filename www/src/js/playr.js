@@ -29,6 +29,8 @@
 
 	PlayrRequester.prototype.request = function() {
 
+		this.emitEvent( 'request' );
+
 		var url 		= this._element.querySelector( 'input[name=url]').value
 			, json		= this._element.querySelector( 'textarea[name=json]').value;
 
@@ -83,8 +85,6 @@
 
 	var PlayrResult = function( element, requester ) {
 
-		console.error( element );
-
 		this._element = element;
 		this._requester = requester;
 
@@ -97,6 +97,10 @@
 		this._requester.on( 'result', function( result ) {
 			console.log( 'PlayrResult: Got result %o', result );
 			this._element.innerHTML = result.join( '<br/>');
+		}.bind( this ) );
+
+		this._requester.on( 'request', function() {
+			this._element.innerHTML = 'Requesting …';
 		}.bind( this ) );
 	
 	};

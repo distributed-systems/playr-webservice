@@ -1,19 +1,29 @@
 {
       "name"                                : "playr-webservice"
     , "description"                         : "test JSON scenarios online"
-    , "version"                             : "0.1.5"
-    , "homepage"                            : "https://github.com/eventEmitter/playr-webservice"
-    , "author"                              : "Michael van der Weg <michael@joinbox.com> (http://joinbox.com/)"
+    , "version"                             : "0.2.0"
+    , "homepage"                            : "https://github.com/distributed-systems/playr-webservice"
+    , "authors": [
+        { 
+              "name"                        : "Felix Steiner"
+            , "email"                       : "felix@joinbox.com"
+            , "homepage"                    : "http://joinbox.com" 
+        }, { 
+              "name"                        : "Michael van der Weg"
+            , "email"                       : "michael@joinbox.com"
+            , "homepage"                    : "http://joinbox.com" 
+        }
+    ]
     , "license"                             : "MIT"
     , "repository": {
-          "url"                             : "https://github.com/eventEmitter/playr-webservice.git"
+          "url"                             : "https://github.com/distributed-systems/playr-webservice.git"
         , "type"                            : "git"
     }
     , "engines": {
         "node"                              : ">=v4.1"
     }
     , "bugs": {
-        "url"                               : "https://github.com/eventEmitter/playr-webservice/issues"
+        "url"                               : "https://github.com/distributed-systems/playr-webservice/issues"
     }
     , "dependencies": {
           "ee-class"                        : "1.x"
@@ -26,6 +36,7 @@
         , "em-formdata-collector"           : "0.x"
         , "playr-json-scenario"             : "2.x"
         , "playr"                           : "1.x"
+        , "ee-argv"                         : "0.1.x"
     }
     , "devDependencies": {
           "mocha"                           : "2.x"
@@ -33,5 +44,8 @@
     , "optionalDependencies": {}
     , "scripts": {
         "test"                              : "./node_modules/mocha/bin/mocha --reporter spec"
+    }
+    , "bin": {
+        "playr"                             : "bin/index.js"
     }
 }

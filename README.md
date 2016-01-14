@@ -1,54 +1,52 @@
 # playr-webservice
 
-test JSON scenarios online
+Test your JSON Test Scnarios online!
+
+Create your scenarios using the [chrome extension](https://github.com/distributed-systems/recordr-chrome-extension).
 
 
 [![npm](https://img.shields.io/npm/dm/playr-webservice.svg?style=flat-square)](https://www.npmjs.com/package/playr-webservice)
-[![Travis](https://img.shields.io/travis/eventEmitter/playr-webservice.svg?style=flat-square)](https://travis-ci.org/eventEmitter/playr-webservice)
+[![Travis](https://img.shields.io/travis/distributed-systems/playr-webservice.svg?style=flat-square)](https://travis-ci.org/eventEmitter/playr-webservice)
 [![node](https://img.shields.io/node/v/playr-webservice.svg?style=flat-square)](https://nodejs.org/)
 
 
-### start
-
-    node .
 
 
-### Website
+## Installation
 
-http://playr.127.0.0.1.xip.io:8000/
+You need node & npm installed. You may either install the server into a folder or globally.
 
+Local folder installation:
 
-### API
+    git clone https://github.com/distributed-systems/playr-webservice.git
+    npm i
 
-Post your scenario to http://playr.127.0.0.1.xip.io:8000/play
+Global installation
 
-
-Your request should contain the following form data fields:
-- url: the base url you want the requests to be sent to (overrides the hostname & port part of your scenario script)
-- scenario: JSON encoded scenario
-
-
-The API returns an array with error messages. If there are 0 messages everthing was ok!
-
-    {
-        "messages": [
-            "<span class=\"error-cyan\">HTTP Header content-length</span>: Expected value 64130 to be &lt; 200",
-            "<span class=\"error-cyan\">data.length</span>: Expected value 60 to be &gt; 5000000"
-        ]
-    }
+    npm i -g playr-webservice
 
 
-CSS Classes that may be used by the error messages:
 
-- error-white
-- error-grey
-- error-blue
-- error-cyan
-- error-green
-- error-magenta
-- error-red
-- error-yellow
-- error-bold
-- error-italic
-- error-underline
-- error-inverse
+
+
+
+## Start
+
+The server listens by default on the port 7000. You may specifiy a custom port using the port parameter
+
+Start from within the folder
+
+    node . [--port=80]
+
+Start the global server
+    
+    playr [--port=80]
+
+
+
+
+## Use
+
+Visit the following website, change the port if you configured it
+
+[http://playr.127.0.0.1.xip.io:7000/](http://playr.127.0.0.1.xip.io:7000/)

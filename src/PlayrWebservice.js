@@ -4,6 +4,7 @@
     let Class           = require('ee-class');
     let type            = require('ee-types');
     let log             = require('ee-log');
+    let argv            = require('ee-argv')
     let path            = require('path');
     let Webservice      = require('ee-webservice');
     let BasicAuth       = require('em-basicauth');
@@ -38,11 +39,11 @@
 
     module.exports = new Class({
 
-        init: function(options) {
+        init: function() {
             
             // start the webservice
             this.service = new Webservice({
-                  port:         8000
+                  port:         argv.has('port') ? argv.get('port') : 7000
                 , interface:    Webservice.IF_ANY
             });
 
@@ -131,7 +132,7 @@
             // hijack result
             validator.resultHook = (msgs) => {
                 messages = messages.concat(msgs);
-            }
+            };
 
 
             playbook.use(validator);
@@ -142,8 +143,8 @@
 
                 messages = messages.map((msg) => {
 
-                    msg = msg.replace(/\>/gi, '&gt;');
-                    msg = msg.replace(/\</gi, '&lt;');
+                    msg = msg.replace(/>/gi, '&gt;');
+                    msg = msg.replace(/</gi, '&lt;');
 
                     // replace colors
                     Object.keys(colors).forEach((code) => {

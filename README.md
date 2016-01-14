@@ -13,7 +13,7 @@ test JSON scenarios online
     node .
 
 
-### Wesbite
+### Website
 
 http://playr.127.0.0.1.xip.io:8000/
 

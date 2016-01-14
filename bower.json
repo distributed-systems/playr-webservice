@@ -1,0 +1,25 @@
+{
+	"name"			: "jb-playr-webservice"
+	, "version"		: "0.0.1"
+	, "main"		: ""
+	, "dependencies": {
+		"eventEmitter"			: "4.3.x"
+		, "bootstrap"			: "4.0.0-alpha.2"
+	}
+	, "devDependencies": {
+	}
+	, "ignore"		: [
+	]
+	, "license"		: "MIT"
+	, "authors"		: [
+		{ 
+			"name"			: "Felix Steiner"
+			, "email"		: "felix@joinbox.com"
+			, "homepage"	: "http://joinbox.com" 
+		}
+	]
+	, "repository"	: {
+		"type"		: "git"
+		, "url"		: "git://github.com/distributed-systems/playr-webservice.git"
+	}
+}

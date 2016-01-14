@@ -1,9 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+	<title>Playr</title>
+
+	<style>
+
+		html {
+			height: 100%;
+		}
+
+		body {
+			min-height: 100%;
+		}
+
+		.form-container {
+			border-right: 1px solid #777;
+		}
+
+		.form-container, 
+		.result-container {
+			padding: 50px;
+		}
+
+		form textarea {
+			min-height: 300px;
+		}
+
+		.json-content {
+			font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+			line-height: 1.9;
+			font-size: 90%;
+		}
+
+		.result-container .result {
+			border-radius: 5px;
+			background-color: #333;
+			color: white;
+			padding: 20px;
+		}
+
+		.error-white {
+			color: white;
+		}
+		.error-grey {
+			color: gray;
+		}
+		.error-blue {
+			color: blue;
+		}
+		.error-cyan {
+			color: ##00BFFF;
+		}
+		.error-green {
+			color: green;
+		}
+		.error-magenta {
+			color: #FF00FF
+		}
+		.error-red {
+			color: red;
+		}
+		.error-yellow {
+			color: yellow;
+		}
+		.error-bold {
+			font-weight: bold;
+		}
+		.error-italic {
+			font-style: italic;
+		}
+		.error-underline {
+			text-decoration: underline;
+		}
+		.error-inverse {
+			color: #FFBF00;
+		}
+
+
+	</style>
+
 </head>
 <body>
+
+	<div class="fluid-container">
+		<div class="row">
+
+			<!-- Input -->
+			<div class="col-md-6">
+				<div class="form-container">
+					<h1>Input</h1>
+					<form action="/play" method="POST">
+						<fieldset class="form-group">
+							<label>URL <span style="color:#ccc">(leave empty if in JSON)</span></label>
+							<input type="text" name="url" class="form-control"/>
+						</fieldset>
+						<fieldset class="form-group">
+							<label>Playr JSON</label>
+							<textarea class="form-control json-content" name="json"></textarea>
+						</fieldset>
+						<button class="btn btn-primary">Play</button>
+					</form>
+				</div>
+			</div>
+
+			<!-- Result -->
+			<div class="col-md-6">
+				<div class="result-container">
+					<h1>Result</h1>
+					<div class="result json-content">
+						Hi
+						this is somethin.g skfdj sakfj sadklfj sklfj sdklfj sldkjfk slfjds lj ksdj flds kdf js
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<link rel="stylesheet" type="text/css" href="/src/bower_components/bootstrap/dist/css/bootstrap.css"/>
+
+	<script src="/src/bower_components/eventEmitter/EventEmitter.js"></script>
+	<script src="/src/js/playr.js"></script>
+	<script>
+		var requester = new window.jb.playr.Requester( document.getElementsByTagName( 'form' )[ 0 ] );
+		var result = new window.jb.playr.Result( document.querySelector( '.result-container .result' ), requester );
+	</script>
 
 </body>
 </html>
